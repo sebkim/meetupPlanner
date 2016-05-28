@@ -58,3 +58,11 @@ p {font-size: 16px;}
   color: red;
   background-color: #C8E6C9;
 }
+
+#removeButton {
+  margin-left: 1em;
+}
+
+h2 {
+  color: #09c;
+}

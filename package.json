@@ -1,0 +1,20 @@
+{
+    "name": "meetup-planner",
+    "version": "0.0.1",
+    "description": "Simple meetup planner for senior web developer nanodegree program in udacity",
+    "keywords": ["planner"],
+    "repository": "https://github.com/sebkim/meetupPlanner.git",
+    "homepage": "https://github.com/sebkim/meetupPlanner/",
+    "author": "Sebo Kim <sebkim85@gmail.com>",
+    "dependencies": {
+        "gulp-clean-css": ">=2.0.8",
+        "gulp-uglify": ">=1.5.3",
+        "gulp-htmlmin": ">=2.0.0",
+        "gulp": ">=3.9.1",
+        "gulp-rename": ">=1.2.2",
+        "gulp-concat": ">=2.6.0"
+    },
+    "scripts": {
+        "minifyAll": "gulp"
+    }
+}

@@ -1,7 +1,7 @@
 $(function() {
   $('#register-submit').click(function(e) {
-    e.preventDefault();
-    window.location.assign('main.html');
+    // e.preventDefault();
+    // window.location.assign('main.html');
   });
   // register form validation.
   $('#register-form').validate({
