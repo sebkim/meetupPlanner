@@ -6,8 +6,9 @@
   <title>Meet-Up Event Planner</title>
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script defer src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
-  <script defer src="js/js-webshim/minified/polyfiller.js"></script>
+  <!-- <script defer src="js/js-webshim/minified/polyfiller.js"></script> -->
   <script defer src="js/main.js"></script>
+  <script defer src="js/idb.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.js"> -->
   <!--[if lt IE 9]>
@@ -33,33 +34,40 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="row">
         <div class="col-lg-12">
-          <form id="createPlan-form" action="" method="post" role="form" style="display: block;" autocomplete="on">
+          <div class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+              <div id="msg" class="text-center"></div>
+              <div id="errMsg" class="text-center"></div>
+          </div>
+
+          </div>
+          <form id="createPlan-form" action="" role="form" style="display: block;" autocomplete="on">
             <div class="form-group">
-              <label for="nameEvent">Name of the event</label>
+              <label for="nameEvent" class="required">Name of the event</label>
               <input type="text" name="nameEvent" id="nameEvent" tabindex="1" class="form-control" value="" autofocus >
             </div>
             <div class="form-group">
-              <label for="typeEvent">Type of the event</label>
+              <label for="typeEvent" class="required">Type of the event</label>
               <input type="text" name="typeEvent" id="typeEvent" tabindex="2" class="form-control" value="">
             </div>
             <div class="form-group">
-              <label for="eventHost">Event host</label>
+              <label for="eventHost" class="required">Event host</label>
               <input type="text" name="eventHost" id="eventHost" tabindex="3" class="form-control" value="">
             </div>
             <div class="form-group">
-              <label for="eventStart">Event start date and time</label>
+              <label for="eventStart" class="required">Event start date and time</label>
               <input type="datetime-local" name="eventStart" id="eventStart" tabindex="4" class="form-control">
             </div>
             <div class="form-group">
-              <label for="eventEnd">Event end date and time</label>
+              <label for="eventEnd" class="required">Event end date and time</label>
               <input type="datetime-local" name="eventEnd" id="eventEnd" tabindex="5" class="form-control">
             </div>
             <div class="form-group">
-              <label for="guestList">Guest list</label>
+              <label for="guestList" class="required">Guest list</label>
               <input type="text" name="guestList" id="guestList" tabindex="6" class="form-control" value="">
             </div>
             <div class="form-group">
-              <label for="location">Location</label>
+              <label for="location" class="required">Location</label>
               <input type="text" name="location" id="location" tabindex="7" class="form-control" value="">
             </div>
             <div class="form-group">
@@ -71,7 +79,7 @@
             <div class="form-group">
               <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
-                  <input type="submit" name="create-submit" id="create-submit" tabindex="" class="form-control btn btn-primary" value="Create a plan">
+                  <input type="submit" name="create-submit" id="create-submit" tabindex="9" class="form-control btn btn-primary" value="Create a plan">
                 </div>
               </div>
             </div>
@@ -81,7 +89,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- Display Created Plans Container -->
 <div id="displayPlan" class="container-fluid bg-2 text-center" style="display: none;">
