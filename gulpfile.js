@@ -36,4 +36,10 @@ gulp.task('minify-js2', function() {
   .pipe(gulp.dest('dist/js'))
 });
 
+gulp.task('watch', function() {
+    gulp.watch('js/*.js', ['minify-js1', 'minify-js2']);
+    gulp.watch('css/*.css', ['minify-css']);
+    gulp.watch('*.html', ['minify-html']);
+});
+
 gulp.task('default',['minify-html', 'minify-css', 'minify-js1', 'minify-js2']);

@@ -4,6 +4,8 @@ This project is for senior web developer nanodegree program of udacity. It's ind
 
 When the user successfully creates his/her account, one can create a meet-up plan. In the navbar, one can also check created plans.  
 
+It is developed under Version 53.0.2751.0 canary (64-bit).
+
 ## Usage
 
 * `npm install` (install required packages)

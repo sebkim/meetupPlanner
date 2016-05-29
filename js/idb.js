@@ -129,8 +129,10 @@
       var locationV = $('#locationV').val();
       var optMessage = $('#optMessage').val();
 
+      $("#createPlan-form").valid();
+
       if ( !nameEvent || !typeEvent || !eventHost || !eventStart || !eventEnd || !guestList || !locationV) {
-        $('#errMsg').text('Please Input all required fields !');
+        // $('#errMsg').text('Please Input all required fields !');
         window.scrollTo(0, 0);
         $('#msg').empty();
         return;
@@ -143,13 +145,13 @@
           $('#msg').append('<p>Successfully Added !</p>');
           $('#errMsg').empty();
       }
+      $("#createPlan-form").data("validator").resetForm();
 
       if (optMessage=="") {
         addPlan(nameEvent, typeEvent, eventHost, eventStart, eventEnd, guestList, locationV);
       } else {
         addPlan(nameEvent, typeEvent, eventHost, eventStart, eventEnd, guestList, locationV, optMessage);
       }
-
 
     });
     $('#navMenu2').click(function(e) {
